@@ -1,1 +1,87 @@
 # PSR-Gameonline
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PSP GameOnline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/football_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid white;
+        }
+        main {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .game-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 15px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PSR Game Online</h1>
+        <p>Play Fun and Free Games Anytime!</p>
+    </header>
+
+    <main>
+        <div class="game-card">
+            <h2>Football</h2>
+            <p>Coming Soon...</p>
+        </div>
+
+        <div class="game-card">
+            <h2>Card</h2>
+            <p>Coming Soon...</p>
+        </div>
+
+        <div class="game-card">
+            <h2>Volleyball</h2>
+            <p>Coming Soon...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Panha's Online Game Hub</p>
+    </footer>
+</body>
+</html>
+'''
+
+@app.route('/')
+def home():
+    return render_template_string(html_template)
+
+if __name__ == '__main__':
+    app.run(debug=True)
